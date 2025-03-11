@@ -1,6 +1,7 @@
 options = {
         "1": "Greet someone",
-        "2": "Exit"
+        "2": "Exit",
+        "3": "ChatGPT Help"
     }
 
 
