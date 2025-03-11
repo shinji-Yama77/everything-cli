@@ -33,3 +33,4 @@ def chatgpt_command():
     prompt = input("Enter your prompt for ChatGPT: ").strip()
     response = client.api_call(prompt)
     print("\nChatGPT Response:\n " + response)
+    print("\n")
