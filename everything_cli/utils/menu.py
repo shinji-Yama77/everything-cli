@@ -4,7 +4,8 @@ import time
 options = {
         "1": "Greet someone",
         "2": "Exit",
-        "3": "ChatGPT Help"
+        "3": "ChatGPT Help",
+        "4": "Build index"
     }
 
 
