@@ -10,6 +10,8 @@ Features
 
 -   **Automate API calls**
 
+-   **CSV to Sqlite Q/A System**
+
 -   **Modular and extensible design for future enhancements**
 
 Installation

@@ -12,16 +12,22 @@ def build_index():
     print(f"[WARNING] {DATA_DIR} does not exist. Creating it now...")
     os.makedirs(DATA_DIR)
 
-    # ✅ Ensure the directory has documents
+    # ensure directory has documents
   if not os.listdir(DATA_DIR):
     print("[ERROR] No documents found in the data directory. Please upload files before indexing.")
     return None
     
-    
+
   documents = SimpleDirectoryReader(DATA_DIR).load_data()
   
   vectorIndex = VectorStoreIndex.from_documents(documents)
-  
-  print("[INFO] index successfully created")
-  return vectorIndex
+
+  query_engine = vectorIndex.as_query_engine()
+
+  query_question = input("Enter your prompt for retrieval: ").strip()
+
+  response = query_engine.query(
+    query_question
+  )
+  print(response)
   
